@@ -24,7 +24,7 @@
     RootViewController *rootVC = [[RootViewController alloc]init];
     UINavigationController *rootNC = [[UINavigationController alloc]initWithRootViewController:rootVC];
     self.window.rootViewController = rootNC;
-    
+    //dsafdfffsfsadfsdf asdf
     
     return YES;
 }
