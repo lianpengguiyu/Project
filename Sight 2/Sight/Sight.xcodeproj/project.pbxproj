@@ -21,6 +21,8 @@
 		C23C04D71B84AB68004FB445 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23C04D51B84AB68004FB445 /* NewsViewController.xib */; };
 		C23C04DB1B84AB7D004FB445 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23C04D91B84AB7D004FB445 /* VideoViewController.m */; };
 		C23C04DC1B84AB7D004FB445 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23C04DA1B84AB7D004FB445 /* VideoViewController.xib */; };
+		C2A8A5C71B856B0500D00A72 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A8A5C51B856B0500D00A72 /* UserViewController.m */; };
+		C2A8A5C81B856B0500D00A72 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A8A5C61B856B0500D00A72 /* UserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		C23C04D91B84AB7D004FB445 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		C23C04DA1B84AB7D004FB445 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		C23C04DD1B84ABA0004FB445 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C2A8A5C41B856B0500D00A72 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		C2A8A5C51B856B0500D00A72 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		C2A8A5C61B856B0500D00A72 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,7 @@
 		C23C04C11B84AA07004FB445 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8A5C31B856AE900D00A72 /* Users */,
 				C23C04C21B84AA07004FB445 /* iBook */,
 				C23C04C31B84AA07004FB445 /* News */,
 				C23C04C41B84AA07004FB445 /* Video */,
@@ -234,6 +240,16 @@
 			children = (
 			);
 			path = ThirdPartys;
+			sourceTree = "<group>";
+		};
+		C2A8A5C31B856AE900D00A72 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				C2A8A5C41B856B0500D00A72 /* UserViewController.h */,
+				C2A8A5C51B856B0500D00A72 /* UserViewController.m */,
+				C2A8A5C61B856B0500D00A72 /* UserViewController.xib */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A8A5C81B856B0500D00A72 /* UserViewController.xib in Resources */,
 				C23C04A31B847B29004FB445 /* Main.storyboard in Resources */,
 				C23C04D21B84AB5A004FB445 /* BookViewController.xib in Resources */,
 				C23C04DC1B84AB7D004FB445 /* VideoViewController.xib in Resources */,
@@ -344,6 +361,7 @@
 				C23C049D1B847B29004FB445 /* Sight.xcdatamodeld in Sources */,
 				C23C04D61B84AB68004FB445 /* NewsViewController.m in Sources */,
 				C23C04DB1B84AB7D004FB445 /* VideoViewController.m in Sources */,
+				C2A8A5C71B856B0500D00A72 /* UserViewController.m in Sources */,
 				C23C04CD1B84AA42004FB445 /* RootViewController.m in Sources */,
 				C23C04CA1B84AA07004FB445 /* AppDelegate.m in Sources */,
 			);
