@@ -8,7 +8,6 @@
 
 #import "RootViewController.h"
 
-#import "PrefixHeader.pch"
 
 
 @interface RootViewController ()
