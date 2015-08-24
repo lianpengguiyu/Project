@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController">
+            <connections>
+                <outlet property="newsWebView" destination="QvZ-wp-V2x" id="K6x-Ba-zvv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-wp-V2x">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.92568847030000001" green="1" blue="0.3289362965" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRL-vk-DlF">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.13041009789999999" blue="0.15648647600000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QvZ-wp-V2x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7bh-U9-gYo"/>
+                <constraint firstItem="QvZ-wp-V2x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q3D-co-AvU"/>
+                <constraint firstAttribute="bottom" secondItem="QvZ-wp-V2x" secondAttribute="bottom" id="ZBF-Qc-76k"/>
+                <constraint firstAttribute="trailing" secondItem="QvZ-wp-V2x" secondAttribute="trailing" id="mIh-r2-VKK"/>
+            </constraints>
+            <point key="canvasLocation" x="391" y="60"/>
+        </view>
+    </objects>
+</document>
