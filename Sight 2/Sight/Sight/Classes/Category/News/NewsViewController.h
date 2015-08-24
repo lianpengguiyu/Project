@@ -10,7 +10,9 @@
 
 @interface NewsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIScrollView *headScrollView;
+
 @property (strong, nonatomic) IBOutlet UIPageControl *pagControl;
+
 
 
 @end
