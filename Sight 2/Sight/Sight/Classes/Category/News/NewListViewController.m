@@ -11,10 +11,12 @@
 #import "NewsDetailViewController.h"
 #import "NewListWithoutImageCell.h"
 #import "CellModel.h"
+#import "MJRefresh.h"
 
 #define themeUrl @"http://news-at.zhihu.com/api/4/theme/"
 @interface NewListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)NSMutableArray *storiesArray;
+
 
 
 @end
@@ -48,13 +50,64 @@
 //  解析数据
     [self dataParse];
     
+    [self.listTableView reloadData];
+    
+    
+    [self.listTableView addHeaderWithTarget:self action:@selector(headUpData)];
+    [self.listTableView addFooterWithTarget:self action:@selector(footUpData)];
    
     
     
     
-    [self.listTableView reloadData];
+    
+//   [self.listTableView headerBeginRefreshing];
+   // [self.listTableView footerBeginRefreshing];
+    
+    
+//      [self.listTableView reloadData];
  
 }
+
+-(void)headUpData
+{
+//    [self dataParse];
+    
+    [self.listTableView reloadData];
+    [self.listTableView headerBeginRefreshing];
+    [self.listTableView  headerEndRefreshing];
+}
+
+-(void)footUpData
+{
+    CellModel *model = self.storiesArray.lastObject;
+    NSString *strUrl = [NSString stringWithFormat:@"%@%ld/before/%ld",themeUrl,self.newsNum,model.id];
+    NSLog(@"%@",strUrl);
+//    [self.storiesArray removeAllObjects];
+
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:strUrl]];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    NSArray * tempArray = [dict objectForKey:@"stories"];
+    for (NSDictionary *dict in tempArray) {
+        CellModel *model = [[CellModel alloc]init];
+        [model setValuesForKeysWithDictionary:dict];
+        [self.storiesArray addObject:model];
+        
+        
+    }
+    
+    [self.listTableView reloadData];
+    
+    
+    
+//    [self.listTableView footerBeginRefreshing];
+    [self.listTableView footerEndRefreshing];
+    
+}
+
+
+
+
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {

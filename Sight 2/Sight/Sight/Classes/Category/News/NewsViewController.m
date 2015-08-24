@@ -39,14 +39,14 @@
   
     self.wScreen = [UIScreen mainScreen].bounds.size.width;
     self.hScreen = [UIScreen mainScreen].bounds.size.height *1.2/3;
-//    
+ 
+//    加载数据
     [self dataLoad];
-    
+//    加载轮播图图片
     [self loadImage];
-    
+//    获得首页的button 通过tag值。添加事件
     [self getButton];
-    
-    
+//    添加计时器
     [self addTimer];
 
    
@@ -64,13 +64,7 @@
     }
 }
 
-////点击新闻页面第一个button。跳转到
-//- (IBAction)newsButtonOneDidClicked:(UIButton *)sender {
-//    
-//    NewListViewController *newVC = [[NewListViewController alloc]init];
-//    [self.navigationController pushViewController:newVC animated:YES];
-//    
-//}
+
 //button点击事件(跳到对应的新闻网页)
 -(void)didButtonClicked:(UIButton *)button
 {
@@ -113,7 +107,7 @@
     for ( int i = 0; i < self.imageArray.count; i++) {
         NSURL *url = [NSURL URLWithString:self.imageArray[i]];
         UIImageView *imaView = [[UIImageView alloc]init];
-         imaView.frame = CGRectMake(self.wScreen * i , 0, self.wScreen,self.hScreen);
+         imaView.frame = CGRectMake(self.wScreen * i , -30 , self.wScreen,self.hScreen * 1.3);
         [imaView sd_setImageWithURL:url placeholderImage:nil];
       
         [self.headScrollView addSubview:imaView];
