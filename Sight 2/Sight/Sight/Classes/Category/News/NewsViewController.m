@@ -9,7 +9,7 @@
 #import "NewsViewController.h"
 #import "DataModel.h"
 #import "UIImageView+WebCache.h"
-#import "SDCycleScrollView.h"
+
 #define webUrl @"http://news-at.zhihu.com/api/4/stories/latest"
 @interface NewsViewController ()
 
